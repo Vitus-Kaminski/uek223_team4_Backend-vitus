@@ -6,13 +6,13 @@ import java.util.NoSuchElementException;
 import java.util.UUID;
 
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
-@AllArgsConstructor
+@AllArgsConstructor@NoArgsConstructor
 public abstract class AbstractServiceImpl<T extends AbstractEntity> implements AbstractService<T> {
-
-  protected final AbstractRepository<T> repository;
+  protected AbstractRepository<T> repository;
 
   @Override
   public T save(T entity) {
